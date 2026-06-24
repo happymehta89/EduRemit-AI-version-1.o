@@ -24,24 +24,46 @@ EduRemit AI is a decentralized, transparent, and low-cost education remittance a
 
 ---
 
-## 📈 Level 5 User Feedback & Iteration Roadmap
+## 📈 Changes from Feedback
 
-To simulate early-stage startup growth, we actively collected feedback from **50+ testnet users** via a structured [Google Form](). 
+To simulate early-stage startup growth, we actively collected feedback from **50+ testnet users** via a structured Google Form. 
 
 🔗 **[View Exported Feedback & Analytics Data (CSV)](https://github.com/happymehta89/EduRemit-AI-version-1.o/blob/main/feedback_responses.csv)**
 
-### Feedback Implementation Log
-Based directly on the feedback provided by our beta users, we are continuously iterating on the product:
+Based directly on the feedback provided by our beta users, we iterated on the product and implemented the following new features:
 
-1. **Feature Request: Transaction Receipts** 
-   * *Feedback:* "I need a way to download my payment history for my records."
-   * *Improvement:* Added a "Download Receipt" (PDF/CSV) feature to the Transaction History dashboards.
-   * *Commit:* [`0983f32`](https://github.com/happymehta89/EduRemit-AI-version-1.o/commit/0983f32)
+### 1. CSV Transaction Export Option
+* **Feedback:** Users requested a simple way to export and download transaction histories for record-keeping and external accounting.
+* **Solution:** Added a "Export CSV" option directly on all Dashboard transaction history components.
+* **Screenshot:**
+  ![Export CSV Feature](./images/export_option.png)
 
-2. **UX Improvement: Guided Onboarding**
-   * *Feedback:* "The dashboard is a bit overwhelming for first-time parents."
-   * *Improvement:* Implemented an interactive tooltip tour for new users to guide them through linking a student and funding their wallet.
-   * *Commit:* [`697c090`](https://github.com/happymehta89/EduRemit-AI-version-1.o/commit/697c090)
+### 2. Progressive Web App (PWA) Mobile Support
+* **Feedback:** Users wanted to access the dashboard on mobile devices as a native application without needing to open a mobile browser each time.
+* **Solution:** Converted the app into a fully-compliant Progressive Web App (PWA) with a manifest file, enabling "Add to Home Screen" on both iOS and Android.
+* **Screenshot:**
+  ![Install on Mobile](./images/install_in_mobile.jpeg)
+
+---
+
+## Product UI & Screenshots
+
+Below are screenshots demonstrating the product user interface, dashboard tracking, mobile responsive design, and AI budget analysis:
+
+### 1. Parent Experience
+![Parent Dashboard](./images/parent_dashboard.png)
+![Parent Transaction History](./images/parents_history.png)
+![Parent Feedback](./images/parent_feedback.png)
+
+### 2. Student Experience
+![Student Dashboard](./images/student_dashboard.png)
+![Student Overview](./images/student_overview.png)
+![AI Budget Advisor](./images/AI_advisor.png)
+![Student Transaction History](./images/student_history.png)
+
+### 3. University Experience
+![University Dashboard](./images/university_dashboard.png)
+![University Transaction History](./images/university_history.png)
 
 ---
 
@@ -138,27 +160,6 @@ eduremit-ai/
 
 ---
 
-## Product UI & Screenshots
-
-Below are screenshots demonstrating the product user interface, dashboard tracking, mobile responsive design, and AI budget analysis:
-
-### 1. Parent Experience
-![Parent Dashboard](./images/parent_dashboard.png)
-![Parent Transaction History](./images/parents_history.png)
-![Parent Feedback](./images/parent_feedback.png)
-
-### 2. Student Experience
-![Student Dashboard](./images/student_dashboard.png)
-![Student Overview](./images/student_overview.png)
-![AI Budget Advisor](./images/AI_advisor.png)
-![Student Transaction History](./images/student_history.png)
-
-### 3. University Experience
-![University Dashboard](./images/university_dashboard.png)
-![University Transaction History](./images/university_history.png)
-
----
-
 ## Setup & Running Locally
 
 ### Prerequisites
@@ -197,5 +198,3 @@ Below are screenshots demonstrating the product user interface, dashboard tracki
    ```bash
    npm run dev
    ```
-
-
