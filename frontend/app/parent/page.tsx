@@ -38,6 +38,23 @@ export default function ParentDashboard() {
         description="Fund a linked student directly, and keep an eye on how it's being spent — every transfer settles on the Stellar testnet."
       />
 
+      {students.length === 0 && (
+        <div className="mb-8 bg-ledger/10 border border-ledger/20 p-5 rounded-2xl flex flex-col gap-2">
+          <div className="flex items-center gap-3 text-ledger font-display text-lg">
+            <span className="flex items-center justify-center w-6 h-6 rounded-full bg-ledger text-white text-sm">1</span>
+            Welcome to EduRemit! Let's get started.
+          </div>
+          <p className="text-sm text-ink/80 ml-9">
+            Your Stellar wallet is securely funded. Your first step is to link a student account using their email address. Once linked, you can instantly send education funds and track their verified expenses on-chain.
+          </p>
+          <div className="ml-9 mt-3">
+            <Button size="sm" onClick={() => setShowLinkForm(true)}>
+              Start: Link your first student
+            </Button>
+          </div>
+        </div>
+      )}
+
       <div className="grid sm:grid-cols-3 gap-4 mb-8">
         <Card>
           <CardBody className="pt-5">
