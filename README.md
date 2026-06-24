@@ -28,7 +28,7 @@ EduRemit AI is a decentralized, transparent, and low-cost education remittance a
 
 To simulate early-stage startup growth, we actively collected feedback from **50+ testnet users** via a structured [Google Form](). 
 
-🔗 **[View Exported Feedback & Analytics Data (Excel)](#)** *(Please link your Google Sheet export here)*
+🔗 **[View Exported Feedback & Analytics Data (CSV)](https://github.com/happymehta89/EduRemit-AI-version-1.o/blob/main/feedback_responses.csv)**
 
 ### Feedback Implementation Log
 Based directly on the feedback provided by our beta users, we are continuously iterating on the product:
