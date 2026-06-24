@@ -36,12 +36,12 @@ Based directly on the feedback provided by our beta users, we are continuously i
 1. **Feature Request: Transaction Receipts** 
    * *Feedback:* "I need a way to download my payment history for my records."
    * *Improvement:* Added a "Download Receipt" (PDF/CSV) feature to the Transaction History dashboards.
-   * *Commit:* [`add commit hash here`](#)
+   * *Commit:* [`0983f32`](https://github.com/happymehta89/EduRemit-AI-version-1.o/commit/0983f32)
 
 2. **UX Improvement: Guided Onboarding**
    * *Feedback:* "The dashboard is a bit overwhelming for first-time parents."
    * *Improvement:* Implemented an interactive tooltip tour for new users to guide them through linking a student and funding their wallet.
-   * *Commit:* [`add commit hash here`](#)
+   * *Commit:* [`697c090`](https://github.com/happymehta89/EduRemit-AI-version-1.o/commit/697c090)
 
 ---
 
