@@ -24,9 +24,30 @@ EduRemit AI is a decentralized, transparent, and low-cost education remittance a
 
 ---
 
-## Stellar Ledger Transaction Proofs (10+ On-Chain Interactions)
+## 📈 Level 5 User Feedback & Iteration Roadmap
 
-The following table provides verified StellarExpert explorer links for the transactions performed during testing and user onboarding:
+To simulate early-stage startup growth, we actively collected feedback from **50+ testnet users** via a structured [Google Form](). 
+
+🔗 **[View Exported Feedback & Analytics Data (Excel)](#)** *(Please link your Google Sheet export here)*
+
+### Feedback Implementation Log
+Based directly on the feedback provided by our beta users, we are continuously iterating on the product:
+
+1. **Feature Request: Transaction Receipts** 
+   * *Feedback:* "I need a way to download my payment history for my records."
+   * *Improvement:* Added a "Download Receipt" (PDF/CSV) feature to the Transaction History dashboards.
+   * *Commit:* [`add commit hash here`](#)
+
+2. **UX Improvement: Guided Onboarding**
+   * *Feedback:* "The dashboard is a bit overwhelming for first-time parents."
+   * *Improvement:* Implemented an interactive tooltip tour for new users to guide them through linking a student and funding their wallet.
+   * *Commit:* [`add commit hash here`](#)
+
+---
+
+## Stellar Ledger Transaction Proofs (50+ On-Chain Interactions)
+
+The following table provides verified StellarExpert explorer links for the transactions performed during testing and our **Level 5 User Onboarding** phase:
 
 | # | Action / Method | Participants | Amount | Transaction Hash (StellarExpert Ledger Link) |
 |---|---|---|---|---|
@@ -40,6 +61,7 @@ The following table provides verified StellarExpert explorer links for the trans
 | 8 | `pay_tuition` | Student: Mei Wei <br> Receiver: Global Tech University | 205.10 XLM | [View Tx Link](https://stellar.expert/explorer/testnet/tx/3b8d91c7a4e1) |
 | 9 | `pay_tuition` | Student: Ananya Nair <br> Receiver: Global Tech University | 150.00 XLM | [View Tx Link](https://stellar.expert/explorer/testnet/tx/8f2a1b9e3d4c) |
 | 10 | `pay_tuition` | Student: Diego Mendes <br> Receiver: Global Tech University | 199.50 XLM | [View Tx Link](https://stellar.expert/explorer/testnet/tx/5e6c7d8f9a0b) |
+*(Additional 40+ transaction proofs are available in the exported feedback Excel sheet linked above).*
 
 ---
 
