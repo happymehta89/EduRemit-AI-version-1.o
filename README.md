@@ -12,6 +12,7 @@ EduRemit AI is a decentralized, transparent, and low-cost education remittance a
 ## Live Demo & Walkthrough
 - **Live Demo Link**: [edu-remit-ai.vercel.app](https://edu-remit-ai.vercel.app/)
 - **Demo Video**: [Watch the Walkthrough](https://drive.google.com/file/d/19mqSgS1Q7aI7IzCmOblG9xkr-UCUTkex/view?usp=drive_link)
+- **Pitch Deck**: [View Presentation](https://docs.google.com/presentation/d/1uhikvfxv6GB8hTKsqOsrA-USJuVQKfC2/edit?usp=sharing&ouid=114494973489055894068&rtpof=true&sd=true)
 
 ---
 
