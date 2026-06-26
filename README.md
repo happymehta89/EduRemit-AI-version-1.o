@@ -4,15 +4,15 @@ EduRemit AI is a decentralized, transparent, and low-cost education remittance a
 
 ## Deployed Smart Contract Address (Testnet)
 - **Network**: Stellar Testnet
-- **Token**: Native XLM Stellar Asset
-- *(Note: Transactions are executed as native Horizon API asset transfers via Freighter, eliminating the need for a custom Soroban contract for standard remittances).*
+- **Contract ID**: `CBAEJOL2DHNWHV3WDYEIST5C6MS6647UK33CIPBCDO4YEV254QZQ3USO`
+- **Native XLM Token Contract ID**: `CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC`
+- **Explorer Link**: [Stellar Lab Contract Viewer](https://lab.stellar.org/r/testnet/contract/CBAEJOL2DHNWHV3WDYEIST5C6MS6647UK33CIPBCDO4YEV254QZQ3USO)
 
 ---
 
 ## Live Demo & Walkthrough
 - **Live Demo Link**: [edu-remit-ai.vercel.app](https://edu-remit-ai.vercel.app/)
 - **Demo Video**: [Watch the Walkthrough](https://drive.google.com/file/d/19mqSgS1Q7aI7IzCmOblG9xkr-UCUTkex/view?usp=drive_link)
-- **Pitch Deck**: [View Presentation](https://docs.google.com/presentation/d/1uhikvfxv6GB8hTKsqOsrA-USJuVQKfC2/edit?usp=sharing&ouid=114494973489055894068&rtpof=true&sd=true)
 
 ---
 
@@ -25,46 +25,24 @@ EduRemit AI is a decentralized, transparent, and low-cost education remittance a
 
 ---
 
-## 📈 Changes from Feedback
+## 📈 Level 5 User Feedback & Iteration Roadmap
 
-To simulate early-stage startup growth, we actively collected feedback from **50+ testnet users** via a structured Google Form. 
+To simulate early-stage startup growth, we actively collected feedback from **50+ testnet users** via a structured [Google Form](). 
 
 🔗 **[View Exported Feedback & Analytics Data (CSV)](https://github.com/happymehta89/EduRemit-AI-version-1.o/blob/main/feedback_responses.csv)**
 
-Based directly on the feedback provided by our beta users, we iterated on the product and implemented the following new features:
+### Feedback Implementation Log
+Based directly on the feedback provided by our beta users, we are continuously iterating on the product:
 
-### 1. CSV Transaction Export Option
-* **Feedback:** Users requested a simple way to export and download transaction histories for record-keeping and external accounting.
-* **Solution:** Added a "Export CSV" option directly on all Dashboard transaction history components.
-* **Screenshot:**
-  ![Export CSV Feature](./images/export_option.png)
+1. **Feature Request: Transaction Receipts** 
+   * *Feedback:* "I need a way to download my payment history for my records."
+   * *Improvement:* Added a "Download Receipt" (PDF/CSV) feature to the Transaction History dashboards.
+   * *Commit:* [`0983f32`](https://github.com/happymehta89/EduRemit-AI-version-1.o/commit/0983f32)
 
-### 2. Progressive Web App (PWA) Mobile Support
-* **Feedback:** Users wanted to access the dashboard on mobile devices as a native application without needing to open a mobile browser each time.
-* **Solution:** Converted the app into a fully-compliant Progressive Web App (PWA) with a manifest file, enabling "Add to Home Screen" on both iOS and Android.
-* **Screenshot:**
-  ![Install on Mobile](./images/install_in_mobile.jpeg)
-
----
-
-## Product UI & Screenshots
-
-Below are screenshots demonstrating the product user interface, dashboard tracking, mobile responsive design, and AI budget analysis:
-
-### 1. Parent Experience
-![Parent Dashboard](./images/parent_dashboard.png)
-![Parent Transaction History](./images/parents_history.png)
-![Parent Feedback](./images/parent_feedback.png)
-
-### 2. Student Experience
-![Student Dashboard](./images/student_dashboard.png)
-![Student Overview](./images/student_overview.png)
-![AI Budget Advisor](./images/AI_advisor.png)
-![Student Transaction History](./images/student_history.png)
-
-### 3. University Experience
-![University Dashboard](./images/university_dashboard.png)
-![University Transaction History](./images/university_history.png)
+2. **UX Improvement: Guided Onboarding**
+   * *Feedback:* "The dashboard is a bit overwhelming for first-time parents."
+   * *Improvement:* Implemented an interactive tooltip tour for new users to guide them through linking a student and funding their wallet.
+   * *Commit:* [`697c090`](https://github.com/happymehta89/EduRemit-AI-version-1.o/commit/697c090)
 
 ---
 
@@ -131,7 +109,8 @@ The following table provides verified StellarExpert explorer links for the trans
 
 ```text
 React (Next.js + Tailwind)
-  ├── Stellar SDK (Freighter)        ──> Stellar Testnet (Horizon API)
+  ├── Soroban RPC Client            ──> Stellar Testnet (Soroban RPC)
+  ├── Stellar SDK (Freighter)        ──> Soroban Smart Contract Calling
   ├── Express Backend (Node.js)      ──> MongoDB / In-Memory Fallback
   ├── Gemini AI API                  ──> Budget Analysis & Categorization
   ├── Sentry SDK                     ──> Real-time Error Monitoring
@@ -142,9 +121,12 @@ React (Next.js + Tailwind)
 ```text
 eduremit-ai/
 │
+├── contracts/           # Rust/Soroban Smart Contract
+│   └── eduremit/        # EduRemit contract package
+│
 ├── backend/             # Express API
 │   ├── src/             
-│   │   ├── config/      # MongoDB connection
+│   │   ├── config/      # MongoDB & Contract settings
 │   │   ├── controllers/ # Auth, wallet, transactions, AI reports
 │   │   ├── models/      # Mongoose schemas
 │   │   └── services/    # Stellar SDK wrapper & Gemini API client
@@ -153,11 +135,32 @@ eduremit-ai/
 ├── frontend/            # Next.js 14 (App Router) Application
 │   ├── app/             # Parent, Student, and University Dashboards
 │   ├── components/      # UI components (TransactionHistory, Wallet)
-│   ├── lib/             # API client and formatting utilities
+│   ├── lib/             # API client, formatting, and stellar-contract helper
 │   └── package.json     # Node dependencies
 │
 └── README.md            # Project documentation
 ```
+
+---
+
+## Product UI & Screenshots
+
+Below are screenshots demonstrating the product user interface, dashboard tracking, mobile responsive design, and AI budget analysis:
+
+### 1. Parent Experience
+![Parent Dashboard](./images/parent_dashboard.png)
+![Parent Transaction History](./images/parents_history.png)
+![Parent Feedback](./images/parent_feedback.png)
+
+### 2. Student Experience
+![Student Dashboard](./images/student_dashboard.png)
+![Student Overview](./images/student_overview.png)
+![AI Budget Advisor](./images/AI_advisor.png)
+![Student Transaction History](./images/student_history.png)
+
+### 3. University Experience
+![University Dashboard](./images/university_dashboard.png)
+![University Transaction History](./images/university_history.png)
 
 ---
 
@@ -199,3 +202,5 @@ eduremit-ai/
    ```bash
    npm run dev
    ```
+
+
