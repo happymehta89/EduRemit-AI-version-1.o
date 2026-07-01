@@ -27,21 +27,22 @@ EduRemit AI is a decentralized, transparent, and low-cost education remittance a
 
 ## 📈 Level 5 User Feedback & Iteration Roadmap
 
-To simulate early-stage startup growth, we actively collected feedback from **50+ testnet users** via a structured [Google Form](). 
+To simulate early-stage startup growth, we actively collected feedback from **50+ testnet users** via a structured Google Form designed to collect user details, including wallet address, email, name, and product feedback (rate your product). 
 
-🔗 **[View Exported Feedback & Analytics Data (CSV)](https://github.com/happymehta89/EduRemit-AI-version-1.o/blob/main/feedback_responses.csv)**
+🔗 **[User Feedback Collection Google Form](https://docs.google.com/forms/d/e/1FAIpQLSeARIyB9da62Mpw0LzjfR3jR5hhmgFCC3sgEwP4SwCkyOLKqQ/viewform)**
+🔗 **[Exported User Feedback Response Sheet](https://docs.google.com/spreadsheets/d/1DlV7ltsRBFI3VUrxmmsaE48qf5n1Ir6gtZuSv23fkR0/edit?usp=sharing)**
 
-### Feedback Implementation Log
-Based directly on the feedback provided by our beta users, we are continuously iterating on the product:
+### Future Improvement & Iteration Plan
+Based directly on the feedback provided by our beta users, we plan to continuously iterate on the product in the next phase:
 
 1. **Feature Request: Transaction Receipts** 
    * *Feedback:* "I need a way to download my payment history for my records."
-   * *Improvement:* Added a "Download Receipt" (PDF/CSV) feature to the Transaction History dashboards.
+   * *Planned Improvement:* We will add a "Download Receipt" (PDF/CSV) feature to the Transaction History dashboards to ensure users can keep track of their expenses easily.
    * *Commit:* [`0983f32`](https://github.com/happymehta89/EduRemit-AI-version-1.o/commit/0983f32)
 
 2. **UX Improvement: Guided Onboarding**
    * *Feedback:* "The dashboard is a bit overwhelming for first-time parents."
-   * *Improvement:* Implemented an interactive tooltip tour for new users to guide them through linking a student and funding their wallet.
+   * *Planned Improvement:* We plan to implement an interactive tooltip tour for new users to guide them through linking a student and funding their wallet for a smoother onboarding experience.
    * *Commit:* [`697c090`](https://github.com/happymehta89/EduRemit-AI-version-1.o/commit/697c090)
 
 ---
